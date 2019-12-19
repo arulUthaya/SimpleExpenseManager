@@ -26,7 +26,7 @@ import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.TransactionDAO;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.ExpenseType;
 import lk.ac.mrt.cse.dbs.simpleexpensemanager.data.model.Transaction;
 
-public class PersistantTransactionDAO extends SQLiteOpenHelper implements TransactionDAO {
+public class PersistentTransactionDAO extends SQLiteOpenHelper implements TransactionDAO {
 
     public static final String DATABASE_NAME = "170046K.db";
     public static final String EXPENSE_COLUMN_ID = "id";
@@ -37,7 +37,7 @@ public class PersistantTransactionDAO extends SQLiteOpenHelper implements Transa
 
     private List<Transaction> transactions;
 
-    public PersistantTransactionDAO(Context context) {
+    public PersistentTransactionDAO(Context context) {
         super(context, DATABASE_NAME , null,1);
         transactions = new LinkedList<>();
     }
